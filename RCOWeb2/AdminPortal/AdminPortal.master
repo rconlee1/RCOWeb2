@@ -69,10 +69,10 @@
                   <li> <a> <i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
                       <li> <a href = "CreateUser_Admin.aspx" > Create User </a></li>
-                      <li> <a href = "#" > Edit User </a></li>
-                      <li> <a href = "#" > Password Reset </a></li>
-                      <li> <a href = "#" > Activate / Deactivate User </a></li>
-                      <li> <a href = "#" > Role Assign/Change </a></li>
+                      <li> <a href = "EditUser.aspx" > Edit User </a></li>
+                      <li> <a href = "PasswordReset.aspx" > Password Reset </a></li>
+                      <li> <a href = "Activate_Deactivate.aspx" > Activate / Deactivate User </a></li>
+                      <li> <a href = "RoleAssignChange.aspx" > Role Assign/Change </a></li>
                     </ul>
                   </li>
                 </ul>
@@ -82,18 +82,20 @@
                 <ul class="nav side-menu">
                   <li> <a> <i class="fa fa-university"></i> School Administration <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li> <a href = "#" > Create / Edit School </a></li>
-                      <li> <a href = "#" > Dashboard </a></li>
-                      <li> <a href = "#" > Financials </a></li>
+                      <li> <a href = "CreateSchool.aspx" > Create School </a></li>
+                        <li> <a href = "EditSchool.aspx" > Edit School </a></li>
+                      <li> <a href = "SchoolDashboard.aspx" > Dashboard </a></li>
+                      <li> <a href = "SchoolFinancials.aspx" > Financials </a></li>
                     </ul>
                   </li>
                   <li> <a> <i class="fa fa-suitcase"></i> Student Administration <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li> <a href = "#" > Create / Edit Student </a></li>
-                      <li> <a href = "#" > Student Assignments/Grading </a></li>
-                      <li> <a href = "#" > Student Progress </a></li>
-                      <li> <a href = "#" > Student Records </a></li>
-                      <li> <a href = "#" > Student Awards/Diplomas </a></li>
+                      <li> <a href = "CreateStudent.aspx" > Create Student </a></li>
+                        <li> <a href = "EditStudent.aspx" > Edit Student </a></li>
+                      <li> <a href = "StudentAssign_Grade.aspx" > Student Assignments/Grading </a></li>
+                      <li> <a href = "StudentProgress.aspx" > Student Progress </a></li>
+                      <li> <a href = "StudentRecords.aspx" > Student Records </a></li>
+                      <li> <a href = "StudentAward_Diplomas.aspx" > Student Awards/Diplomas </a></li>
                     </ul>
                   </li>
                  
