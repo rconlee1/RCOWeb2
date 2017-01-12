@@ -32,31 +32,11 @@
 	<link rel="stylesheet" href="css/demo.css" />
 	<link rel="stylesheet" href="css/vimuse-dark.css" />
 
-            <!-- Custom Theme Scripts -->
-    <script src="../js/custom.min.js"></script>
+
 </head>
 <body class="nav-md">
     <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="respond" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
+       
 
         <div class="container body">
       <div class="main_container">
@@ -89,9 +69,9 @@
                 <ul class="nav side-menu">
                   <li><a><i class="glyphicon glyphicon-book"></i> Student Portal <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="#">Student Profile</a></li>
-                      <li><a href="/StudentPortal/StudentPortal.aspx">Current Course Progress</a></li>
-                      <li><a href="#">Certificates of Completion</a></li>
+                      <li><a href="StudentProfile.aspx">Student Profile</a></li>
+                      <li><a href="StudentPortal.aspx">Current Course Progress</a></li>
+                      <li><a href="CertofComplete.aspx">Certificates of Completion</a></li>
                     </ul>
                   </li>
 
@@ -99,16 +79,16 @@
                   <li><a><i class="glyphicon glyphicon-pencil"></i>  Course Registration <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="/StudentPortal/courses.aspx">Courses</a></li>
-                      <li><a href="projects.html">Upcoming Courses</a></li>
-                      <li><a href="project_detail.html">Convert to for Credit</a></li>
+                      <li><a href="UpcomingCourses.aspx">Upcoming Courses</a></li>
+                      <li><a href="ConverttoCredit.aspx">Convert to for Credit</a></li>
                     </ul>
                   </li>
                   <li><a><i class="glyphicon glyphicon-screenshot"></i>  Rhema Online Chinese <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="page_403.html">About</a></li>
-                      <li><a href="page_404.html">FAQ</a></li>
-                      <li><a href="page_500.html">Refer</a></li>
-                      <li><a href="plain_page.html">Contact</a></li>
+                      <li><a href="About.aspx">About</a></li>
+                      <li><a href="FAQs.aspx">FAQ</a></li>
+                      <li><a href="Referral.aspx">Refer</a></li>
+                      <li><a href="Contact.aspx">Contact</a></li>
                     </ul>
                   </li>
                   
@@ -240,7 +220,6 @@
                   <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Rhema Chinese Online</p>
             </footer>
@@ -258,6 +237,9 @@
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
+
+                <!-- Custom Theme Scripts -->
+    <script src="../js/custom.min.js"></script>
 
     <script>
      $(document).ready(function() {
