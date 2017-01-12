@@ -55,7 +55,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Sean Adams</h2>
+                <h2><asp:LoginName ID="LoginName2" runat="server" /></h2>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -167,7 +167,7 @@
                       <a>
                         <span class="image"><img src="../images/sean.jpg" alt="Profile Image" /></span>
                         <span>
-                          <span>Welcome, Sean</span>
+                          <span>Welcome, <asp:LoginName ID="LoginName1" runat="server" /></span>
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
