@@ -1,5 +1,5 @@
 ﻿
-Partial Class AdminPortal_SiteDashboard1
+Partial Class Account_RegisterUserWizard
     Inherits System.Web.UI.Page
 
 
