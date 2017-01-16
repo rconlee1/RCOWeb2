@@ -11,7 +11,7 @@ Public Module BundleConfig
             "~/Scripts/WebForms/WebForms.js",
             "~/Scripts/WebForms/WebUIValidation.js",
             "~/Scripts/WebForms/MenuStandards.js",
-            "~/Scripts/WebForms/Focus.js", "~/Scripts/WebForms/GridView.js", 
+            "~/Scripts/WebForms/Focus.js", "~/Scripts/WebForms/GridView.js",
             "~/Scripts/WebForms/DetailsView.js",
             "~/Scripts/WebForms/TreeView.js",
             "~/Scripts/WebForms/WebParts.js"))

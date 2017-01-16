@@ -24,7 +24,7 @@
     <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="/Content/custom.min11.css" rel="stylesheet">
+    <link href="/Content/custom.less" rel="stylesheet">
 </head>
 <body class="nav-md">
     <form runat="server">
@@ -39,7 +39,7 @@
             <div class="clearfix"></div>
 
             <!-- menu profile quick info -->
-            
+
 
             <br />
 
@@ -52,7 +52,7 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section" style="margin-left:15px;margin-top:5px;">
 
- 
+
                   </div>
               <div class="menu_sectio">
                 <ul class="nav side-menu">
@@ -73,21 +73,21 @@
                       <li> <a href = "Courses.aspx" > Courses </a></li>
                       <li> <a href = "ForCredit.aspx" > For Credit </a></li>
                     </ul>
-                  </li>              
+                  </li>
                  </ul>
               </div>
-              
+
         <div Class="menu_sectio">
                 <ul Class="nav side-menu">
                   <li> <a> <i Class="fa fa-leaf"></i> Resources <span class="fa fa-chevron-down"></span></a>
                     <ul Class="nav child_menu">
                       <li> <a href = "FAQs.aspx" > FAQ </a></li>
                       <li> <a href = "RhemaInternational.aspx" > Rhema International </a></li>
-                     
+
                     </ul>
                   </li>
-                  
-                 
+
+
                 </ul>
               </div>
             </div>
@@ -121,9 +121,9 @@
               </div>
 
               <ul Class="nav navbar-nav navbar-right">
-                 
+
                 <li Class="">
- 
+
 <!-- Trigger the modal with a button -->
 <button type="button" class="btn btn-elegant btn-sm" onclick="location.href='../Account/Login.aspx'"><span class="fa fa-pencil"></span>Sign-in/Sign-up</button>
 
@@ -144,7 +144,7 @@
 
           </div>
           <div class="modal-footer">
-            New To Rhema Online Chinese? 
+            New To Rhema Online Chinese?
             <a href="#" class="btn btn-elegant btn-sm">Create an Account!</a>
           </div>
       </div>
@@ -162,11 +162,11 @@
    <li><a class="dropdown-item" href="#">Simplified</a></li>
       </ul>
   </div>
-</div> 
+</div>
 </li>
-  
+
                   </ul>
-        
+
             </nav>
           </div>
 
@@ -174,7 +174,7 @@
         </div>
         <!-- /top navigation -->
 
-       
+
         <!-- /page content -->
             <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
@@ -189,7 +189,7 @@
         </footer>
         <!-- /footer content -->
 
- 
+
 </div>
     </form>
         <!-- jQuery -->
