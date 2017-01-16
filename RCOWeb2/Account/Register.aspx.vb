@@ -12,6 +12,7 @@ Public Partial Class Account_Register
         Dim manager = New UserManager()
         Dim user = New ApplicationUser() With {.UserName = userName.Text}
         Dim result = manager.Create(user, Password.Text)
+
         If result.Succeeded Then
             IdentityHelper.SignIn(manager, user, isPersistent:=False)
             IdentityHelper.RedirectToReturnUrl(Request.QueryString("ReturnUrl"), Response)
