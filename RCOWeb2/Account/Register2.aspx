@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Account/Account.master" AutoEventWireup="false" CodeFile="Register2.aspx.vb" Inherits="Account_Register2" %>
+﻿<%@ Page Title="Account Register" Language="VB" MasterPageFile="~/Account/Account.master" AutoEventWireup="false" CodeFile="Register2.aspx.vb" Inherits="Account_Register2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 
@@ -12,13 +12,13 @@
     
     
     
-    <h2><%: Title %></h2>
+    <h1><%: Title %></h1>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
 
     <div class="form-horizontal">
-        <h4>Create a new account.</h4>
+        <h2>Create a new account.</h2>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
 
@@ -96,7 +96,7 @@
             </div>
         </div>
         <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirm password</asp:Label>
+            <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirm Password</asp:Label>
             <div class="col-md-10">
                 <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
