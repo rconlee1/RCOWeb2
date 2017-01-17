@@ -41,7 +41,7 @@
                 <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="drop_country" CssClass="col-md-2 control-label">Country</asp:Label>
             <div class="col-md-10">
-                <asp:DropDownList ID="drop_country" CssClass="form-control" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="drop_country" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="country_name" DataValueField="country_id"></asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="drop_country"
                     CssClass="text-danger" ErrorMessage="The Country field is required." />
             </div>
@@ -49,7 +49,7 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="drop_province" CssClass="col-md-2 control-label">Province/State</asp:Label>
             <div class="col-md-10">
-                <asp:DropDownList ID="drop_province" CssClass="form-control" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="drop_province" CssClass="form-control" runat="server" DataSourceID="SqlDataSource2" DataTextField="prov_name" DataValueField="prov_id"></asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="drop_province"
                     CssClass="text-danger" ErrorMessage="The Province/State field is required." />
             </div>
@@ -57,7 +57,7 @@
                 <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="drop_language" CssClass="col-md-2 control-label">Language Preferred</asp:Label>
             <div class="col-md-10">
-                <asp:DropDownList ID="drop_language" CssClass="form-control" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="drop_language" CssClass="form-control" runat="server" DataSourceID="SqlDataSource3" DataTextField="lang_name" DataValueField="lang_id"></asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="drop_language"
                     CssClass="text-danger" ErrorMessage="The Language Preference field is required." />
             </div>
@@ -107,11 +107,14 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server"  id="submitTocheck" OnClick="submitTocheck_Click" Text="Register" CssClass="btn btn-default" />
+                <asp:Button runat="server"  id="submitTocheck" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>
     </div>
                         </div>
                    </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RCOWeb2ConnectionString %>" SelectCommand="SELECT [country_id], [country_name] FROM [Country]"></asp:SqlDataSource>
+                   <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:RCOWeb2ConnectionString %>" SelectCommand="SELECT [prov_name], [prov_id] FROM [Prov_State]"></asp:SqlDataSource>
+                   <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:RCOWeb2ConnectionString %>" SelectCommand="SELECT [lang_name], [lang_id] FROM [Languages]"></asp:SqlDataSource>
 </asp:Content>
 

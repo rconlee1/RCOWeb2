@@ -5,7 +5,7 @@ Partial Class Account_RegisterTry
     Protected Sub Button1_Click(sender As Object, e As EventArgs)
         Dim manager = New UserManager()
         Dim user = New ApplicationUser() With {.UserName = TextBox1.Text}
-        Dim result = manager.FindByName(TextBox1.Text)
+        Dim result = manager.FindByName(user.UserName)
         If result Is Nothing Then
             Label1.Text = "No match"
         Else
