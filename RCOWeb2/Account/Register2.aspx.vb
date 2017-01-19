@@ -1,16 +1,10 @@
-﻿Imports Microsoft.AspNet.Identity
-Imports Microsoft.AspNet.Identity.EntityFramework
-Imports Microsoft.AspNet.Identity.Owin
-Imports System
-Imports System.Linq
-Imports System.Web
-Imports System.Web.UI
+﻿
+Partial Class Account_Register2
+    Inherits System.Web.UI.Page
 
-Public Partial Class Account_Register
-    Inherits Page
     Protected Sub CreateUser_Click(sender As Object, e As EventArgs)
         Dim manager = New UserManager()
-        Dim user = New ApplicationUser() With {.UserName = userName.Text}
+        Dim user = New ApplicationUser() With {.UserName = UserName.Text}
         Dim result = manager.Create(user, Password.Text)
 
         If result.Succeeded Then
@@ -20,4 +14,5 @@ Public Partial Class Account_Register
             ErrorMessage.Text = result.Errors.FirstOrDefault()
         End If
     End Sub
+
 End Class

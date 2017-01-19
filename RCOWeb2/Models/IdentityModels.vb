@@ -1,10 +1,6 @@
-﻿Imports System
-Imports System.Threading.Tasks
+﻿Imports System.Threading.Tasks
 Imports System.Security.Claims
-Imports Microsoft.AspNet.Identity
 Imports Microsoft.AspNet.Identity.EntityFramework
-Imports Microsoft.AspNet.Identity.Owin
-Imports Microsoft.Owin.Security
 
 ' You can add profile data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
 Public Class ApplicationUser
@@ -22,15 +18,18 @@ Public Class ApplicationUser
     End Function
 End Class
 
+Public Class ApplicationUserManager
+End Class
+
 Public Class ApplicationDbContext
     Inherits IdentityDbContext(Of ApplicationUser)
     Public Sub New()
         MyBase.New("DefaultConnection", throwIfV1Schema:=False)
     End Sub
-    
-    Public Shared Function Create As ApplicationDbContext
+
+    Public Shared Function Create() As ApplicationDbContext
         Return New ApplicationDbContext()
-    End Function    
+    End Function
 End Class
 
 #Region "Helpers"

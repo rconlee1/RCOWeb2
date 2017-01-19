@@ -9,7 +9,7 @@ Imports Microsoft.Owin.Security
 Public Partial Class Account_Login
     Inherits Page
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
-        RegisterHyperLink.NavigateUrl = "Register.aspx"
+        RegisterHyperLink.NavigateUrl = "Register2.aspx"
 
     End Sub
 
