@@ -23,13 +23,15 @@
     <!-- NProgress -->
     <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
 
+    <link href=" /Content/custom.less" rel="stylesheet">
+
     <!-- Custom Theme Style -->
     <link href=" /Content/custom.min11.css" rel="stylesheet">
 </head>
 <body class="nav-md">
     <form runat="server">
 
-  
+
 
         <div class="container body">
       <div class="main_container">
