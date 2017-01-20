@@ -4331,3 +4331,6 @@ input[type=password] {
 .form-control {
   border-radius: 0px;
 }
+.coursetext {
+  float: left;
+}
