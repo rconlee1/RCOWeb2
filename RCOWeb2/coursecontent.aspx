@@ -19,7 +19,7 @@
 <div class="container coursetext">
     <div class="col-sm-6">
 
-      <h2>16:9 Responsive Aspect Ratio</h2>
+
 <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
 </div>
