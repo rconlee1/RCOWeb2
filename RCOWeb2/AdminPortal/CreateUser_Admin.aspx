@@ -1,132 +1,120 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/AdminPortal/AdminPortal.master" AutoEventWireup="false" CodeFile="CreateUser_Admin.aspx.vb" Inherits="AdminPortal_CreateUser_Admin" %>
+﻿<%@ Page Title="Create User" Language="VB" MasterPageFile="~/AdminPortal/AdminPortal.master" AutoEventWireup="false" CodeFile="CreateUser_Admin.aspx.vb" Inherits="AdminPortal_CreateUser_Admin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    
 
-           <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Create User</h3>
-              </div>
+                   <div class="right_col" role="main">
+                    <div class="">
 
-              <div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                  <div class="input-group">
 
-                  </div>
-                </div>
-              </div>
+                        <div class="clearfix"></div>
+    
+    
+    
+    
+    <h1><%: Title %></h1>
+    <p class="text-danger">
+        <asp:Literal runat="server" ID="ErrorMessage" />
+    </p>
+
+    <div class="form-horizontal">
+        <h2>Create a new account.</h2>
+        <hr />
+        <asp:ValidationSummary runat="server" CssClass="text-danger" />
+
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txt_FirstName" CssClass="col-md-2 control-label">First Name</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txt_FirstName" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txt_FirstName"
+                    CssClass="text-danger" ErrorMessage="The First Name field is required." />
             </div>
-            <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-
-                  <div class="x_content">
-
-                    <form class="form-horizontal form-label-left" novalidate="novalidate">
-
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text"/>
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12"/>
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Confirm Email <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-
-                        <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">User ID<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="url" id="UID1" name="UID1" required="required"  class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">Confirm User ID <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="url" id="UID2" name="UID2" data-validate-linked="UID1" required="required"  class="form-control col-md-7 col-xs-12"/>
-                        </div>
-                      </div>
-   
-
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button id="send" type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <!-- /page content -->
-
-     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- validator -->
-    <script src="../vendors/validator/validator.js"></script>
-
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
-
-    <!-- validator -->
-    <script>
-      // initialize the validator function
-      validator.message.date = 'not a real date';
-
-      // validate a field on "blur" event, a 'select' on 'change' event & a '.reuired' classed multifield on 'keyup':
-      $('form')
-        .on('blur', 'input[required], input.optional, select.required', validator.checkField)
-        .on('change', 'select.required', validator.checkField)
-        .on('keypress', 'input[required][pattern]', validator.keypress);
-
-      $('.multi.required').on('keyup blur', 'input', function() {
-        validator.checkField.apply($(this).siblings().last()[0]);
-      });
-
-      $('form').submit(function(e) {
-        e.preventDefault();
-        var submit = true;
-
-        // evaluate the form using generic validaing
-        if (!validator.checkAll($(this))) {
-          submit = false;
-        }
-
-        if (submit)
-          this.submit();
-
-        return false;
-      });
-    </script>
-    <!-- /validator -->
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txt_LastName" CssClass="col-md-2 control-label">Last Name</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txt_LastName" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txt_LastName"
+                    CssClass="text-danger" ErrorMessage="The Last Name field is required." />
+            </div>
+        </div>
+                <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="drop_country" CssClass="col-md-2 control-label">Country</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="drop_country" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="country_name" DataValueField="country_id"></asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="drop_country"
+                    CssClass="text-danger" ErrorMessage="The Country field is required." />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="drop_province" CssClass="col-md-2 control-label">Province/State</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="drop_province" CssClass="form-control" runat="server" DataSourceID="SqlDataSource2" DataTextField="prov_name" DataValueField="prov_id"></asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="drop_province"
+                    CssClass="text-danger" ErrorMessage="The Province/State field is required." />
+            </div>
+        </div>
+                <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="drop_language" CssClass="col-md-2 control-label">Language Preferred</asp:Label>
+            <div class="col-md-10">
+                <asp:DropDownList ID="drop_language" CssClass="form-control" runat="server" DataSourceID="SqlDataSource3" DataTextField="lang_name" DataValueField="lang_id"></asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="drop_language"
+                    CssClass="text-danger" ErrorMessage="The Language Preference field is required." />
+            </div>
+        </div>
+                <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txt_email" CssClass="col-md-2 control-label">Email</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txt_email" textmode="Email" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txt_email"
+                    CssClass="text-danger" ErrorMessage="The Email field is required." />
+            </div>
+        </div>
+                <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="txt_confemail" CssClass="col-md-2 control-label">Confirm Email</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="txt_confemail" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txt_confemail"
+                    CssClass="text-danger" ErrorMessage="The Confirm Email field is required." />
+                <asp:CompareValidator ID="emailcompare1" runat="server" ErrorMessage="Email doesn't match" ControlToCompare="txt_email" ControlToValidate="txt_confemail"></asp:CompareValidator>
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="UserName" CssClass="col-md-2 control-label">User name</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="UserName" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"
+                    CssClass="text-danger" ErrorMessage="The user name field is required." />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
+                    CssClass="text-danger" ErrorMessage="The password field is required." />
+            </div>
+        </div>
+        <div class="form-group">
+            <asp:Label runat="server" AssociatedControlID="ConfirmPassword" CssClass="col-md-2 control-label">Confirm Password</asp:Label>
+            <div class="col-md-10">
+                <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" CssClass="form-control" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
+                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
+                <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"
+                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <asp:Button runat="server"  id="submitTocheck" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
+            </div>
+        </div>
+    </div>
+                        </div>
+                   </div>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:RCOWeb2ConnectionString %>" SelectCommand="SELECT [country_id], [country_name] FROM [Country]"></asp:SqlDataSource>
+                   <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:RCOWeb2ConnectionString %>" SelectCommand="SELECT [prov_name], [prov_id] FROM [Prov_State]"></asp:SqlDataSource>
+                   <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:RCOWeb2ConnectionString %>" SelectCommand="SELECT [lang_name], [lang_id] FROM [Languages]"></asp:SqlDataSource>
 </asp:Content>
 
