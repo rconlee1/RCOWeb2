@@ -38,8 +38,8 @@
 
                             </div>
 
-                            <p>Course Description goes here.</p>
-<button type="button" class="btn btn-block btn-elegant">Start Course</button>
+                            <p>CHoose This Course For Test</p>
+<a href="coursecontent.aspx"><button type="button" class="btn btn-block btn-elegant">Start Course</button></a>
                           </div>
                         </div>
                       </div>
